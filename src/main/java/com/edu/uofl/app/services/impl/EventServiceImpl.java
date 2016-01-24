@@ -19,4 +19,20 @@ public class EventServiceImpl implements EventService {
 		return eventRepository.findAll();
 	}
 
+	public Event getEvent(Long eventId) {
+		return eventRepository.findOne(eventId);
+	}
+
+	public Event saveEvent(Event event) {
+		return eventRepository.save(event);
+	}
+
+	public Event updateEvent(Event event) {
+		return eventRepository.save(event);
+	}
+
+	public void deleteEvent(Long eventId) {
+		eventRepository.delete(eventId);;
+	}
+
 }
